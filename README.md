@@ -1,2 +1,2 @@
-# MultipleLanguage
-Multiple Language
+# MultiLanguage
+Multi Language
