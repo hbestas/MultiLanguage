@@ -18,6 +18,7 @@ Controller Example...
 
 [ApiController]
 [Route("[controller]")]
+
 public class WeatherForecastController : ControllerBase
 {
     private readonly ILocalizerResourceManager _resourceManager;
