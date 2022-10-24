@@ -16,31 +16,28 @@ Startup.cs Example...
 
 Controller Example...
 
-[ApiController]
-[Route("[controller]")]
 
-public class WeatherForecastController : ControllerBase
-{
-    private readonly ILocalizerResourceManager _resourceManager;
-
-    private readonly DataContext _context;
-
-    public WeatherForecastController(ILocalizerResourceManager resourceManager, DataContext context)
+    public class WeatherForecastController : ControllerBase
     {
-        _resourceManager = resourceManager;
-        _context = context;
+        private readonly ILocalizerResourceManager _resourceManager;
+        private readonly DataContext _context;
+
+        public WeatherForecastController(ILocalizerResourceManager resourceManager, DataContext context)
+        {
+            _resourceManager = resourceManager;
+            _context = context;
+        }
+
+        [HttpGet]
+        public string Get()
+        {
+            var data = _context.Set<Address>().Where(x => x.IsActive).ToList();
+
+            var resourceValue = _resourceManager.GetResource("portal_global_ok");
+
+            return "";
+        }
     }
-
-    [HttpGet]
-    public string Get()
-    {
-        var data = _context.Set<Address>().Where(x => x.IsActive).ToList();
-
-        var resourceValue = _resourceManager.GetResource("portal_global_ok");
-
-        return "";
-    }
-}
 
 
 ----------------------------------------------------------------------------------------------------------------------
