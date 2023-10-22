@@ -47,4 +47,11 @@ Suggestion...
 - It is recommended to use the key names as the example below for cache etc. case.  ("portal_global_ok", "api_member_getmember_error")
 ( "portal name" _ "controller name" _ "method name" _ "button name" )
 - All keys with the word global in their name can be used jointly.
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+You can get paid support for faster use and integration with Cache.
+hbestas@teknolojik.net
+
   
