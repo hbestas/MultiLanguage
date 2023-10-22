@@ -4,8 +4,7 @@ Multi Language
 ----------------------------------------------------------------------------------------------------------------------
 
 Database Table Create
-
-```
+ ...
 CREATE TABLE [dbo].[LocalizerResource](
 	[Id] [uniqueidentifier] NOT NULL,
 	[LanguageCode] [nvarchar](256) NULL,
@@ -22,7 +21,7 @@ CREATE TABLE [dbo].[LocalizerResource](
 )WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-```
+ ...
 
 ----------------------------------------------------------------------------------------------------------------------
 
