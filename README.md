@@ -1,6 +1,29 @@
 # MultiLanguage
 Multi Language 
 
+----------------------------------------------------------------------------------------------------------------------
+
+Database Table Create
+
+CREATE TABLE [dbo].[LocalizerResource](
+	[Id] [uniqueidentifier] NOT NULL,
+	[LanguageCode] [nvarchar](256) NULL,
+	[Key] [nvarchar](256) NULL,
+	[Value] [nvarchar](MAX) NULL,
+	[Description] [nvarchar](1024) NULL,
+	[Tag] [nvarchar](128) NULL,
+	[IsActive] [bit] NOT NULL,
+	[IsDeleted] [bit] NOT NULL,
+	[CreatedAt] [datetimeoffset](7) NOT NULL
+ CONSTRAINT [PK_LocalizerResource] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+----------------------------------------------------------------------------------------------------------------------
+
 Startup.cs Example...
 
     public void ConfigureServices(IServiceCollection services)
